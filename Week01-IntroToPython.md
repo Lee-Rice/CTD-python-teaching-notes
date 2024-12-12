@@ -6,19 +6,21 @@
 
 Here is an overview of what students cover this week:
 
-* 1.1 Python Basics
-  * Python variables don't need to be declared before assignment.
-  * Variable data types can change be changed dynamically.
-    * Common Python data types:
-      * Integer (int): Whole numbers (e.g., 42, -3)
-      * Float (float): Decimal numbers (e.g., 3.14, -0.5)
-      * String (str): Text (e.g., "hello", "world")
-      * Boolean (bool): Represents True or False values
-  * Type casting occurs using conversion functions like `int()`, `float()`, and `str()`.
+* 1.1 [Python Basics](https://github.com/Code-the-Dream-School/python-essentials/blob/main/lessons/01IntroToPython.md#11-python-basics)
+  * Python Variables
+    * Python variables don't need to be declared before assignment.
+    * Variable data types can change be changed dynamically.
+  * Python data types
+    * Integer (int): Whole numbers (e.g., 42, -3)
+    * Float (float): Decimal numbers (e.g., 3.14, -0.5)
+    * String (str): Text (e.g., "hello", "world")
+    * Boolean (bool): Represents True or False values
+  * Type Casting
+    * Type casting occurs using conversion functions like `int()`, `float()`, and `str()`.
   * [Operators in Python](https://github.com/Code-the-Dream-School/python-essentials/blob/main/lessons/01IntroToPython.md#operators-in-python)
-    * Python has a variety of means to perform operations variables and values.
+    * Python has a variety of means to perform operations on variables and values.
 
-* 1.2 Flow Control
+* 1.2 [Flow Control](https://github.com/Code-the-Dream-School/python-essentials/blob/main/lessons/01IntroToPython.md#12-control-flow)
   * [Conditional Statements](https://github.com/Code-the-Dream-School/python-essentials/blob/main/lessons/01IntroToPython.md#conditional-statements)
     * Execute code when certain conditions are met.
     * Can be nested in each other.
@@ -31,7 +33,7 @@ Here is an overview of what students cover this week:
       * `break`
       * `continue`
 
-* 1.3 Functions
+* 1.3 [Functions](https://github.com/Code-the-Dream-School/python-essentials/blob/main/lessons/01IntroToPython.md#13-functions)
   * Defining/calling a python function using mulitple parameters and a return.
     * Basic example:
 
@@ -42,20 +44,20 @@ Here is an overview of what students cover this week:
         print(greet("Hello,", "Bob!"))
         ```
 
-* 1.4 Error Handling
+* 1.4 [Error Handling](https://github.com/Code-the-Dream-School/python-essentials/blob/main/lessons/01IntroToPython.md#14-error-handling)
   * Managed with `try`, `except`, `else`, and `finally` blocks.
-    * `try`, `except`, `else` example:
+    * Handing errors with `try`, `except`, `else`:
 
-    ``` python
-    try:
-        result = 10 / 2
-    except ZeroDivisionError:
-        print("Error: Division by zero is not allowed.")
-    else:
-        print(f"Success! The result is {result}.")
-    ```
+      ``` python
+      try:
+          result = 10 / 2
+      except ZeroDivisionError:
+          print("Error: Division by zero is not allowed.")
+      else:
+          print(f"Success! The result is {result}.")
+      ```
 
-    * `finally` example:
+    * Using `finally`:
 
       ``` python
       try:
@@ -69,7 +71,6 @@ Here is an overview of what students cover this week:
         ```
 
     * Raising exceptions with `raise`
-      * Example:
 
       ``` python
       def check_age(age):
@@ -82,6 +83,37 @@ Here is an overview of what students cover this week:
           print(e)
         ```
 
+* 1.5 [Basic Debugging](https://github.com/Code-the-Dream-School/python-essentials/blob/main/lessons/01IntroToPython.md#15-basic-debugging)
+  * Debugging with Print Statements
+    * Example:
+
+      ``` python
+      def multiply(a, b):
+        result = a * b
+        print("Result is:", result)  # Print to check the result
+        return result
+        multiply(3, 5)  # Output: Result is: 15
+        ```
+
+  * Debugging with Logging
+    * Example:
+
+     ``` python
+     # Step 1
+     import logging
+
+     # Step 2
+     logging.basicConfig(level=logging.DEBUG)
+     
+     # Step 3
+     def multiply(a, b):
+      logging.debug(f"Multiplying {a} and {b}")
+      result = a * b
+      logging.info(f"Result is: {result}")
+      return result
+    multiply(3, 5)
+    ```
+
 # Guidance for Mentors
 
 Potential FAQs or trouble spots from this week include:
@@ -90,20 +122,18 @@ Potential FAQs or trouble spots from this week include:
   * [Official Python3 documentation](https://docs.python.org/3/index.html).
   * [Official Python FAQs](https://docs.python.org/3/index.html)
   * [Official Python Tutorial](https://docs.python.org/3/tutorial/index.html)
-  * [Python HOWTO)](https://docs.python.org/3/howto/index.html1)
+  * [Python HOWTO](https://docs.python.org/3/howto/index.html1)
 * Type hinting
   * Depending on other programming languages a student is familiar with, they may be wondering if variable/parameter types need to be defined in a function.
     * While Python supports type hinting, it is not natively enforced.
     * Reference: [Support for Typehints](https://docs.python.org/3/library/typing.html#typing-support-for-type-hints)
-* Python 2 vs. Python 3
-  * Students may have used Python 2 previously.
 * Why do I sometimes get strange results when doing basic math operations?
   * Python decimals are not exact.
   * Reference: [Why are floating-point calculations so inaccurate?](https://docs.python.org/3/faq/design.html#why-are-floating-point-calculations-so-inaccurate)
 * Why doesn't Python use brackets and instead use indentation?
   * The language designer believes that indenation makes code more easily readable.
     * Reference: [Why does Python use indentation for grouping of statements?](https://docs.python.org/3/faq/design.html#why-does-python-use-indentation-for-grouping-of-statements)
-* Where can I find more information on how to use Python logging?
+* Where can I find additional information on how to use Python logging?
   * The Python documentation has a good [Logging HOWTO](https://docs.python.org/3/howto/logging.html)
 
 # Assignment Rubric
@@ -117,7 +147,7 @@ You can mark the student's assignment as complete if their submission:
 
 ## Example solutions
 
-Note: Solutions will vary based on style and input values used.
+Note: Solutions will vary based on student style and input values used.
 
 ### Task 1
 
