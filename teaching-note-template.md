@@ -1,6 +1,6 @@
- Week | Topic | Learning Objectives | Key Resources |
+| Week | Topic | Learning Objectives | Key Resources |
 |-------|-------|--------------------|-------------|
-| <Week #> | <Topic> | <Learning Objectives> | <Key Resources> |
+| <Week#> | <Topic> | <Learning Objectives> | <Key Resources> |
 
 # Overview
 
